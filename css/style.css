@@ -1,0 +1,358 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  font-family: "Open Sans", serif;
+  line-height: 1.4;
+  
+}
+
+h2 {
+  font-family: "Amatic SC", serif;
+  font-size: 65px;
+}
+span , p{
+  color: #7F7F90;
+  margin: 10px;
+}
+h3 {
+  font-family: "Inter", serif;
+  font-weight: 700;
+  font-size: 19px;
+}
+.container {
+  width: 90%;
+  margin: auto;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  box-shadow: 0px 0px 10px 0px;
+}
+.navbar h1 a {
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+}
+.navbar h1 a::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid red;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+}
+.navbar .container {
+  width: 80%;
+  margin: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar .icon {
+  align-self: center;
+  width: 15%;
+}
+.navbar .icon i {
+  width: 50px;
+  font-size: 25px;
+}
+.navbar .nav-menu {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.navbar .nav-menu li {
+  padding: 0 20px;
+}
+
+.color1 {
+  color: #a1afba;
+}
+.navbar .nav-menu a {
+  position: relative;
+}
+
+.navbar .nav-menu a::before{
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #e74949;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  
+  transition: width 0.5s ease-in-out;
+}
+
+.navbar .nav-menu a:hover::before {
+  width: 100%;
+}
+
+body:has(.home:target) .home-link::before{
+  width: 100% !important;
+}
+.navbar .nav-menu .color1:hover {
+  color: black;
+}
+/*start header section*/
+
+.header , .gallery {
+  background-color: #EEEEEE;
+}
+.header {
+  height: 100vh;
+  width: 100%;
+ 
+}
+.header .container {
+  margin-top: 80px;
+  padding: 40px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-content {
+  width: 30%;
+}
+.header .header-image {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+
+  width: 40%;
+}
+
+.header .header-image img {
+
+  width: 100%;
+  filter:  drop-shadow(4px 4px 9px #000a);
+  animation: shake 0.5s infinite;
+  animation-play-state: paused;
+}
+
+.header .header-image img:hover{
+  animation-play-state: running;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.header p {
+  color: #4f4f5a;
+  font-size: 16px;
+}
+
+.header .header-content .buttons {
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+}
+.btn1,
+.btn2 {
+  font-size: 16px;
+}
+
+.header .header-content .buttons .btn1 {
+  padding: 10px 20px;
+  background-color: #ce1212;
+  border: 1px solid none;
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 20px;
+  color: white;
+}
+.header .header-content .buttons .btn2 .icon{
+  background-image: linear-gradient(to right, #ce1212 0 50%, transparent 50% 100%);
+  margin-right: 10px;
+  
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+
+}
+.header .header-content .buttons .btn2 .icon i {
+  
+
+ padding: 15px;
+  border-radius: 50%;
+  align-self: center;
+  
+  background-color: white;
+  color: #ce1212;
+  
+}
+
+.header .header-content .buttons .btn2 {
+
+  margin-left: 30px;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+}
+
+/*end header section*/
+
+
+/*start chefs section*/
+.chefs h2 span , .gallery-title h2 span{
+  color: #D12121;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.chefs .container .chef-box .chef-card{
+  width: 30%;
+  box-shadow: 3px 3px 15px 0px rgba(0,0,0,0.1);
+  transition: all 0.5s;
+  position: relative;
+  border: transparent;
+  overflow: hidden;
+
+}
+.chefs , .chef-box{
+  background-color: #FFFFFF;
+}
+.chef-image{
+  position: relative;
+}
+
+.chefs .container .chef-box .chef-card .chef-image::before{
+  content: '';
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  left: 0;
+  bottom:0;
+  background-image: url(../wave.svg);
+  
+  background-repeat: repeat-x;
+
+
+
+}
+
+.chefs .chef-box .chef-card:hover{
+  transform: scale(1.1);
+
+}
+
+.chefs .chef-box .chef-card .icons{
+  width: 50px;
+  background-color:#ffffff4d;
+  position: absolute;
+  top: 30px;
+  right: -50px;
+  padding: 10px;
+  color: gray;
+ opacity: 0;
+ transition: all 0.5s;
+
+}
+.chefs .chef-box .chef-card:hover .icons{
+  right: 20px;
+  opacity: 1;
+}
+.chefs .chef .icons i:hover {
+  color: #37373f66;
+}
+
+
+/*end chefs section*/
+
+/*style gallery*/
+
+.gallery .gallery-box {
+  padding: 50px 0px;
+  columns: 3;
+  gap: 20px;
+}
+.gallery .gallery-box .picture{
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery .gallery-box .picture .layer{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #00000096;
+  color: #fff;
+  transition: all 0.5s;
+}
+.gallery .gallery-box .picture .layer h2 {
+  font-family: "Inter", serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+.gallery .gallery-box .picture:hover .layer{
+  top: 0;
+}
